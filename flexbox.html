@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex; /* or inline-flex */
+        flex-direction: row; /* row | row-reverse | column | column-reverse */
+        flex-wrap: wrap; /* nowrap | wrap | wrap-reverse; */
+        justify-content: space-between; /* flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe */
+        align-items: stretch; /* flex-start | flex-end | center | stretch | baseline */
+        background-color: DodgerBlue;
+      }
+
+      .flex-container > div {
+        /* ">" selects the direct children of the class */
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        
+        /* Properties we will edit and modify! */
+        flex-grow: 1; 
+        flex: 1 1 auto; /* none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+        align-self: auto; /* auto | flex-start | flex-end | center | baseline | stretch */
+      }
+
+      #tester {
+        /* flex-grow: 2; */
+        /* flex-basis: 200px; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexible Boxes</h1>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div id="tester">5*</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+  </body>
+</html>
